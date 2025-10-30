@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-mongoose.connect("mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.5.8");
+mongoose.connect("mongodb+srv://Piyush:451778@cluster0.pwz8j.mongodb.net/NotesApp");
 
 const {Schema,model} = mongoose;
 

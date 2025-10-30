@@ -1,10 +1,12 @@
-import express from 'express';
+import express, { urlencoded } from 'express';
+import {noteRoutes} from './routes/notes.js';
 
 const app = express();
 const PORT = 5000;
 
-import {noteRoutes} from './routes/notes.js';
-app.get('./',noteRoutes);
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json()); 
+app.use('/',noteRoutes);
 
 
 app.listen(PORT , () => {
